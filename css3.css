@@ -6,12 +6,29 @@ h2, h3 {
 #reset {
    height: 60px;
    width: 60px;
-   position:absolute;
+   /* position:absolute;
    top: 50px;
-   left: 400px; 
+   left: 400px;  */
+   margin-left: 10px;
    border-radius: 8px;
    padding: 10px;
    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.1);
+}
+
+#information{
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.5em;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height:40px;
+    width:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(143, 200, 250);
 }
 
 input, #check{
@@ -24,19 +41,30 @@ input, #check{
 #AppCounter1, #AppCounter2{
     font-size: 1.5em;
     /*font-weight: bold;*/
-    margin-right: 355px;
+    margin-left: 20px;
 
 } 
 
-.counter, .counter2 {
+.counter, .counter2, .informationBox{
     display: flex;
+    align-content: flex-start;
     align-items: baseline;
 
 }
 
+.informationBox {
+    background-color: rgb(143, 200, 250);
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+}
 
 
 .container{
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
     background-color: rgb(143, 200, 250);
     border-radius: 10px;
     box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.1); /* Shadow */

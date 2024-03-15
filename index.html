@@ -15,23 +15,36 @@
 <body>
     </style>
     <div class="container">
+        
         <h1>Palindrome Checker</h1>
-        <input id="input" type="text" placeholder="Type a word"/>
-        <button id="check" onclick="check()">Check</button>
-        <button id= "reset" onclick="reset()">Reset</button>
-        <div class="counter">
-            <h2>Non-Palindrome Words</h2>
-            <div id="AppCounter1">(0)</div>
+        
+        <button id="information" onclick="information()">?</button>
+        <div class="controls-container">
+            <input id="input" type="text" placeholder="Type a word"/>
+            <button id="check" onclick="check()">Check</button>
+            <button id= "reset" onclick="reset()">Reset</button>
         </div>
-        <div id="output1"></div>
-        <div class="counter2">
-            <h3>Palindrome Words</h3>
-            <div id="AppCounter2">(0)</div>
+        <div class="Statistics">
+            <div class="counter">
+                <h2>Non-Palindrome Words</h2>
+                <div id="AppCounter1">(0)</div>
+            </div>
+            <div id="output1"></div>
+            <div class="counter2">
+                <h3>Palindrome Words</h3>
+                <div id="AppCounter2">(0)</div>
+            </div>
+            <div id="output2"></div>
         </div>
-        <div id="output2"></div>
+        <div class="informationBox">
+            <h4>Eng: a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or nurses run. <br>
+
+                Dt: Palindrome sind Wörter bzw. Zahlenreihen, die sowohl vorwärts als auch rückwärts gelesen dasselbe Wort bzw. dieselbe Zahlenreihe ergeben. z.B. mama, madam, 010</h4>
+        </div>
         
 
-        <script src="java3.js"></script>
+        
     </div>
+    <script src="java3.js"></script>
 </body>
 </html>

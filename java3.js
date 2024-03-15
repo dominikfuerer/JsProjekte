@@ -60,3 +60,12 @@ document.addEventListener('keydown', function(event) {
       check();
     }
 });
+
+function information() {
+    var informationBox = document.getElementById(informationBox);
+    informationBox.style.backgroundColor = "invisible";
+    informationBox.style.borderStyle = "none";
+}
+//to be done:
+// capital letters
+// info what is a palindrome
