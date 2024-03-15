@@ -7,19 +7,31 @@
     <title>Palindrome Checker</title>
     <style>
         body {
-            background-color: aqua;
+            font-family: "Roboto", sans-serif;
+            background: linear-gradient(to right, #65f5e2, #257fd3);;
         }
     </style>
 </head>
 <body>
     </style>
-    <h1>Palindrome Checker</h1>
-    <input id="input" type="text" placeholder="Type a word"/>
-    <button onclick="check()">Check</button>
-    <h2>Non-Palindrome Words</h2>
-    <div id="output1"></div>
-    <h3>Palindrome Words</h3>
-    <div id="output2"></div>
-    <script src="java3.js"></script>
+    <div class="container">
+        <h1>Palindrome Checker</h1>
+        <input id="input" type="text" placeholder="Type a word"/>
+        <button id="check" onclick="check()">Check</button>
+        <button id= "reset" onclick="reset()">Reset</button>
+        <div class="counter">
+            <h2>Non-Palindrome Words</h2>
+            <div id="AppCounter1">(0)</div>
+        </div>
+        <div id="output1"></div>
+        <div class="counter2">
+            <h3>Palindrome Words</h3>
+            <div id="AppCounter2">(0)</div>
+        </div>
+        <div id="output2"></div>
+        
+
+        <script src="java3.js"></script>
+    </div>
 </body>
 </html>

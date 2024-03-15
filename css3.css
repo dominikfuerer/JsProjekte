@@ -1,3 +1,49 @@
 h2, h3 {
     font-size: 1.5em;
+    flex: 1;
 }
+
+#reset {
+   height: 60px;
+   width: 60px;
+   position:absolute;
+   top: 50px;
+   left: 400px; 
+   border-radius: 8px;
+   padding: 10px;
+   box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.1);
+}
+
+input, #check{
+    margin-bottom: 60px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.1);
+}
+
+#AppCounter1, #AppCounter2{
+    font-size: 1.5em;
+    /*font-weight: bold;*/
+    margin-right: 355px;
+
+} 
+
+.counter, .counter2 {
+    display: flex;
+    align-items: baseline;
+
+}
+
+
+
+.container{
+    background-color: rgb(143, 200, 250);
+    border-radius: 10px;
+    box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    padding: 20px; /* Adds padding inside the container */
+}
+
+
+
+
+
