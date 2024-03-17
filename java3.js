@@ -4,17 +4,47 @@ var nonPa = ""
 var Pa = ""
 var PaCounter = 0
 var nonPaCounter = 0
+var infCounter = 1
 
+/* window.onload = function() {
+    // Your function call here
+    reset();
+};
+ */
 function reverseString(str) {
     return str.split("").reverse().join("")
 }
 
+
+
+function isLetterOrSpecial(char) {
+// Get the character code of the input character
+    var charCode = char.charCodeAt(0);
+    
+// Check if the character code falls within the range of uppercase letters (65-90) or lowercase letters (97-122)
+    if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+        return 'Letter';
+    } else {
+        return 'Special Character';
+    }
+}
+
 function check() {
     var value = input.value;
-    var reverse = reverseString(value)
+    var sieb = ""
+    for (var i=0; i < value.length; i++){
+        if (isLetterOrSpecial(value[i]) === 'Letter'){
+            if ( value[i] == value[i].toUpperCase()){
+                sieb = sieb + value[i]
+            } else {
+                sieb = sieb +value[i].toUpperCase()
+            }
+        }
+    }
 
-    if (value === reverse){
-        body.style.backgroundColor = "green";
+    var reverse = reverseString(sieb)
+
+    if (sieb === reverse){
         alert(value + " is a Palindrome")
         if (PaCounter < 1){
             Pa = value;
@@ -28,7 +58,7 @@ function check() {
 
         
     } else {
-        body.style.backgroundColor = "red";
+
         alert(value + " is sadly not a Palindrome")
         if (nonPaCounter < 1){
             nonPa = value;
@@ -44,15 +74,19 @@ function check() {
 }
 
 function reset() {
+    var informationBox = document.querySelector('.informationBox');
     nonPa =""
     Pa = ""
     PaCounter = 0
     nonPaCounter = 0
+    infCounter = 0
+    informationBox.style.display = 'none'
+
     document.getElementById("output2").innerText = Pa;
     document.getElementById("output1").innerText = nonPa;
     document.getElementById("AppCounter2").innerText = "(0)";
     document.getElementById("AppCounter1").innerText = "(0)";
-    body.style.backgroundColor = "aqua";
+
 }
 
 document.addEventListener('keydown', function(event) {
@@ -62,9 +96,17 @@ document.addEventListener('keydown', function(event) {
 });
 
 function information() {
-    var informationBox = document.getElementById(informationBox);
-    informationBox.style.backgroundColor = "invisible";
-    informationBox.style.borderStyle = "none";
+    var informationBox = document.querySelector('.informationBox');
+    
+    if (infCounter==1) {
+        informationBox.style.display = 'none'
+        infCounter = infCounter - 1
+    } else{
+        var informationBox = document.querySelector('.informationBox');
+        informationBox.style.display = 'block'
+        infCounter = infCounter + 1
+    } 
+    
 }
 //to be done:
 // capital letters
