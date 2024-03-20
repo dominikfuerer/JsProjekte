@@ -4,7 +4,10 @@ var nonPa = ""
 var Pa = ""
 var PaCounter = 0
 var nonPaCounter = 0
-var infCounter = 1
+var infCounter = 0
+var checkmark = document.getElementById('checkmark');
+var wrongsign = document.getElementById('wrongsign');
+var informationBox = document.querySelector('.informationBox');
 
 /* window.onload = function() {
     // Your function call here
@@ -52,13 +55,14 @@ function check() {
         } else {
             Pa = Pa + ", " + value;
         }
+        checkmark.style.display = 'block'
+        wrongsign.style.display = 'none'
         document.getElementById("output2").innerText = Pa;
         PaCounter = PaCounter + 1
         document.getElementById("AppCounter2").innerText ="(" + PaCounter + ")";
 
         
     } else {
-
         alert(value + " is sadly not a Palindrome")
         if (nonPaCounter < 1){
             nonPa = value;
@@ -66,6 +70,8 @@ function check() {
         } else {
             nonPa = nonPa + ", " + value;
         }
+        checkmark.style.display = 'none'
+        wrongsign.style.display = 'block'
         document.getElementById("output1").innerText = nonPa;
         nonPaCounter = nonPaCounter + 1
         document.getElementById("AppCounter1").innerText ="(" + nonPaCounter + ")";
@@ -74,13 +80,14 @@ function check() {
 }
 
 function reset() {
-    var informationBox = document.querySelector('.informationBox');
     nonPa =""
     Pa = ""
     PaCounter = 0
     nonPaCounter = 0
     infCounter = 0
     informationBox.style.display = 'none'
+    checkmark.style.display = 'none'
+    wrongsign.style.display = 'none'
 
     document.getElementById("output2").innerText = Pa;
     document.getElementById("output1").innerText = nonPa;
@@ -96,18 +103,13 @@ document.addEventListener('keydown', function(event) {
 });
 
 function information() {
-    var informationBox = document.querySelector('.informationBox');
     
     if (infCounter==1) {
         informationBox.style.display = 'none'
         infCounter = infCounter - 1
     } else{
-        var informationBox = document.querySelector('.informationBox');
         informationBox.style.display = 'block'
         infCounter = infCounter + 1
     } 
     
 }
-//to be done:
-// capital letters
-// info what is a palindrome

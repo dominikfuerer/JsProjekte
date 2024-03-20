@@ -17,9 +17,13 @@
     <div class="container">
         
         <h1>Palindrome Checker</h1>
-        
-        <button id="information" onclick="information()">?</button>
+        <div class="Help">
+            <button id="information" onclick="information()">?</button>
+            <h5><- toggle for explanation</h5>
+        </div>
         <div class="controls-container">
+            <span id="checkmark">&#10003;</span>
+            <span id="wrongsign">&#x58;</span>
             <input id="input" type="text" placeholder="Type a word"/>
             <button id="check" onclick="check()">Check</button>
             <button id= "reset" onclick="reset()">Reset</button>
@@ -44,6 +48,8 @@
 
                 Dt: Palindrome sind Wörter, die sowohl vorwärts als auch rückwärts gelesen dasselbe Wort bzw. dieselbe Zahlenreihe ergeben. z.B. madam, 010</h4>
         </div>
+        
+        
         
 
         

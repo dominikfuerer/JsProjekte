@@ -20,22 +20,36 @@ h2, h3 {
     padding: 10px;
     box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.1);
     font-size: 1.5em;
-    position: absolute;
-    left: 20px;
-    top: 20px;
     height:40px;
     width:40px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color:rgb(143, 200, 250);
+    margin-right: 10px;
 }
 
+.Help{
+    position: fixed;
+    left: 15px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+
+
 input, #check{
-    margin-bottom: 60px;
+/*     margin-bottom: 60px; */
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.1);
+}
+
+input{
+    margin-left: 10px;
 }
 
 #AppCounter1, #AppCounter2{
@@ -52,11 +66,24 @@ input, #check{
 
 }
 
+#checkmark, #wrongsign{
+    display: none; 
+    font-size: 2em;
+}
+
+.controls-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
 .informationBox {
+    display: none;
     background-color: rgb(143, 200, 250);
     border: 2px solid black;
     border-radius: 8px;
     padding: 10px;
+    margin-top: 50px;
 }
 
 
