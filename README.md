@@ -13,6 +13,3 @@ Das Programm kann Wörter, Sätze und Zeichenfolgen daurauf Testen ob sie ein Pa
 ## In progress...
 - Design Updates
 - nächster Tester
-- Toggle hinweis für Hilfestellung
-- top margin of infobox
-- emojies when finding palindrome
